@@ -1,0 +1,68 @@
+----------------------------------------------------------
+1 - IMPORTANTE (método em herença):
+
+O método escrito sobrescreve o da herença, exemplo:
+
+class Coelho extends Animal{
+    comer(){
+        console.log('coelho comendo');
+    }
+}
+
+Ou seja, se houver um método com o mesmo nome na classe mãe, ele será substituído.
+Para que seja executado, junto com o conteúdo do método da classe Coelho, usa-se o "super". Exemplo:
+
+
+class Coelho extends Animal{
+    comer(){
+        super().comer();
+        console.log('coelho comendo');
+    }
+}
+
+saída:
+    "animal comendo"
+    "coelho comendo"
+
+
+----------------------------------------------------------
+2 - Tipos:
+
+boollean
+number
+string
+Array<>
+Enum
+
+
+-----------------------------------------------------------
+3 - Interface vs Type:
+
+Ponto 1.
+trabalhando com:
+Type = tipos
+Interface = objetos
+
+Ponto 2.
+Além disso, posso realizar o merge de interface escrevendo ela novamente. Já o type não.
+
+
+Ponto 3.
+Consigo fazer mapeamento com type e interface não. Exemplo:
+- - -
+type StringConvert<T> = {
+    [P in keyof T]: string
+}
+- - -
+
+
+Ponto 3.
+Criar alians somente com type. Exemplo:
+
+type TipoEmail = string;
+
+
+
+-----------------------------------------------------------
+4 - Interface:
+
